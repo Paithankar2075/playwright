@@ -1,0 +1,20 @@
+{
+  "name": "playwrightframework",
+  "version": "1.0.0",
+  "description": "This is my amazon project",
+  "main": "index.js",
+  "scripts": {
+    "runHeaded": "npx playwright test --headed",
+    "runHeadless": "npx playwright test",
+    "e2e": "npx playwright test ./tests/CustomScripts.spec.js --headed",
+    "e2eHeadless": "npx playwright test ./tests/CustomScripts.spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.5.2"
+  }
+}
