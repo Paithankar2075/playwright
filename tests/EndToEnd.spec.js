@@ -17,4 +17,5 @@ test("Verify login with valid credentials", async ({page} )=>{
     await page.locator("//a[normalize-space()='Place Order']").click();
     await expect(page.locator("//h1[text()=' Thankyou for the . ']")).toBeVisible();
     await expect(page.locator("#toast-container")).toBeVisible();
+    await page.screenshot({path: "screenshot.png", fullPage: true});
 })

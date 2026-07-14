@@ -4,9 +4,11 @@ test("JS Simple Alert", async( {page} )=>{
     
     await page.goto("https://testautomationpractice.blogspot.com/");
 
-    await page.locator("#alertBtn").click();
+    await page.locator("//button[@id='alertBtn']").click();
     page.on('dialog', async(dialog)=>{
         console.log("Dialog detected")
+
+        //console.log(dialog.message());
         console.log("My msg printed in side alert box "+dialog.message())
         await dialog.accept();
     })
@@ -14,7 +16,7 @@ test("JS Simple Alert", async( {page} )=>{
     //await page.locator("#alertBtn").click();
 })
 
-test.only("JS confirmation Alert", async( {page} )=>{
+test("JS confirmation Alert", async( {page} )=>{
     
     await page.goto("https://testautomationpractice.blogspot.com/");
 
@@ -23,15 +25,16 @@ test.only("JS confirmation Alert", async( {page} )=>{
 
         console.log("Dialog detected")
 
-        await dialog.accept("Anuj"); 
-        await dialog.dismiss();
-
         console.log("My msg printed in side alert box "+dialog.message())
+        
+        await dialog.accept("Anuj"); 
         
         console.log("Click on OK button")
     })
 
     await page.locator("#promptBtn").click();
-    await page.pause();
+
+       await page.screenshot({path: 'page.png'});
+   // await page.pause();
 
 })
