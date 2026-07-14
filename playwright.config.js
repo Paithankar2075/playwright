@@ -4,6 +4,10 @@
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
+
+  
+  reporter: [["line"], ["allure-playwright"]],
+allure open ./allure-report
   testDir: './tests',
   timeout: 40000,
   expect: {
