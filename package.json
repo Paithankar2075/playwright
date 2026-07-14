@@ -17,5 +17,16 @@
     "@playwright/test": "^1.59.1",
     "@types/node": "^25.5.2",
     "allure-playwright": "^3.7.2"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paithankar2075/playwright.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Paithankar2075/playwright/issues"
+  },
+  "homepage": "https://github.com/Paithankar2075/playwright#readme"
 }
